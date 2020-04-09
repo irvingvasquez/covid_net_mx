@@ -6,6 +6,10 @@ from skimage import io, transform
 
 from PIL import Image
 
+class2id = test_count = {'normal': 0, 'pneumonia': 1, 'COVID-19': 2}
+
+id2class = {0: 'normal', 1: 'pneumonia', 2: 'COVID-19'}
+
 class COVIDxDataset(Dataset):
     def __init__(self, txt_frame_file, images_path, transform=None):
         """
